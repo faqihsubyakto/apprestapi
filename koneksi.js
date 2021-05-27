@@ -5,10 +5,13 @@ const conn = mysql.createConnection({
   host: "localhost",
   user: "root",
   password: "",
-  database: "dbrestapi",
+  database: "restapidb",
 });
 
 conn.connect((err) => {
-  if (err) throw err;
-  console.log("Mysql terkoneksi");
+  if (err) {
+    console.log("Mysql terkoneksi");
+  } else {
+    console.log("Connected!:)");
+  }
 });
