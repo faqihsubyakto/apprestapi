@@ -5,13 +5,14 @@ const conn = mysql.createConnection({
   host: "localhost",
   user: "root",
   password: "",
-  database: "restapidb",
+  database: "dbrestapi",
 });
 
 conn.connect((err) => {
   if (err) {
-    console.log("Mysql terkoneksi");
+    console.log("Mysql tidak terkoneksi");
   } else {
     console.log("Connected!:)");
   }
 });
+module.exports = conn;
