@@ -23,11 +23,11 @@ exports.tampilberdasarkanid = function (req, res) {
   connection.query(
     "SELECT * FROM mahasiswa WHERE id_mahasiswa = ?",
     [id],
-    function (error, result, fields) {
+    function (error, rows, fields) {
       if (error) {
         console.log(error);
       } else {
-        response.ok(result, res);
+        response.ok(rows, res);
       }
     }
   );
