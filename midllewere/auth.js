@@ -1,5 +1,5 @@
 var connection = require("../koneksi");
-var mysql = require("Mysql");
+var mysql = require("mysql");
 var md5 = require("md5");
 var response = require("../res");
 var jwt = require("jsonwebtoken");
@@ -103,5 +103,5 @@ exports.login = function (req, res) {
 // membuat halaman baru apakah bisa di akses atau tidak
 
 exports.halamanrahasia = function (req, res) {
-  response.ok("halaman ini hanya tersedia untuk user role=2");
+  response.ok("halaman ini hanya tersedia untuk user role=2", res);
 };

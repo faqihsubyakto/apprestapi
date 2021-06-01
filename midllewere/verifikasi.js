@@ -4,9 +4,9 @@ const config = require("../config/secret");
 function verifikasi(roles) {
   return function (req, rest, next) {
     // cek authorization with header
-    var tokenwithbeareer = req.header.authorization;
-    if (tokenwithbeareer) {
-      var token = tokenwithbeareer.split("")[1];
+    var tokenwithbearer = req.headers.authorization;
+    if (tokenwithbearer) {
+      var token = tokenwithbearer.split("")[1];
       // verifikasi
       jwt.verify(token, config.secret, function (error, decoded) {
         if (error) {
